@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#073b4c">
+  <meta name="description" content="Trusted aquascape shop in Talisay, Cebu with 5.0-star reviews. Custom tank design, aquarium maintenance, and quality fish at budget-friendly prices. Call 09695266136.">
+  <title>AQUA PETSHOP ONLINE | Aquascape &amp; Aquatic Shop in Talisay, Cebu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --aqua: #00b4d8;
+      --ocean: #0077b6;
+      --deep: #073b4c;
+      --green: #2a9d8f;
+      --gold: #f4a261;
+      --ink: #17333c;
+      --muted: #60777c;
+      --paper: #ffffff;
+      --mist: #f3f9f8;
+      --line: #e2eeec;
+      --shadow: 0 18px 50px rgba(7, 59, 76, .10);
+      --radius: 22px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 86px; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: "DM Sans", sans-serif;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+    img { display: block; max-width: 100%; }
+    a { color: inherit; }
+    button { font: inherit; }
+    .container { width: min(1160px, calc(100% - 48px)); margin-inline: auto; }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      color: var(--green);
+      font-size: .76rem;
+      font-weight: 800;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+    .eyebrow::before { width: 23px; height: 2px; background: var(--gold); content: ""; }
+    h1, h2, h3 { margin: 0; font-family: "Manrope", sans-serif; line-height: 1.15; letter-spacing: -.035em; }
+    h2 { color: var(--deep); font-size: clamp(2rem, 4vw, 3.25rem); }
+    .section-intro { max-width: 620px; margin: 18px auto 0; color: var(--muted); font-size: 1.05rem; }
+
+    .site-header {
+      position: sticky;
+      z-index: 20;
+      top: 0;
+      border-bottom: 1px solid rgba(226, 238, 236, .8);
+      background: rgba(255, 255, 255, .95);
+      backdrop-filter: blur(14px);
+    }
+    .nav-wrap { display: flex; min-height: 78px; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { display: inline-flex; align-items: center; gap: 11px; color: var(--deep); font-family: "Manrope", sans-serif; font-size: .92rem; font-weight: 800; letter-spacing: .045em; text-decoration: none; white-space: nowrap; }
+    .brand-mark { display: block; width: 44px; height: 44px; flex: none; overflow: hidden; border: 2px solid #e2eeec; border-radius: 50%; background: white; }
+    .brand-mark img { width: 100%; height: 100%; border-radius: inherit; object-fit: cover; }
+    .nav-links { display: flex; align-items: center; gap: 34px; margin: 0; padding: 0; list-style: none; }
+    .nav-links a { color: #426069; font-size: .91rem; font-weight: 600; text-decoration: none; transition: color .2s ease; }
+    .nav-links a:hover { color: var(--ocean); }
+    .nav-cta, .button {
+      display: inline-flex;
+      min-height: 48px;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      padding: 0 19px;
+      border: 0;
+      border-radius: 999px;
+      background: var(--ocean);
+      color: white;
+      font-size: .9rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: transform .2s ease, background .2s ease, box-shadow .2s ease;
+    }
+    .nav-cta:hover, .button:hover { transform: translateY(-2px); background: #00669d; box-shadow: 0 10px 24px rgba(0, 119, 182, .22); }
+    .button svg, .nav-cta svg { width: 17px; height: 17px; flex: none; }
+    .button-light { border: 1px solid rgba(255,255,255,.45); background: rgba(255,255,255,.12); color: white; backdrop-filter: blur(8px); }
+    .button-light:hover { background: rgba(255,255,255,.22); }
+    .menu-toggle { display: none; width: 44px; height: 44px; border: 1px solid var(--line); border-radius: 50%; background: white; color: var(--deep); cursor: pointer; }
+    .menu-toggle svg { width: 21px; height: 21px; }
+
+    .hero {
+      position: relative;
+      display: flex;
+      min-height: min(720px, calc(100svh - 78px));
+      align-items: center;
+      overflow: hidden;
+      background: var(--deep);
+      color: white;
+      isolation: isolate;
+    }
+    .hero::before {
+      position: absolute;
+      z-index: -3;
+      inset: 0;
+      background: url("https://images.unsplash.com/photo-1524704654690-b56c05c78a00?auto=format&fit=crop&w=2000&q=85") center 48% / cover no-repeat;
+      content: "";
+      transform: scale(1.015);
+    }
+    .hero-video { position: absolute; z-index: -2; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+    .hero::after { position: absolute; z-index: -1; inset: 0; background: linear-gradient(90deg, rgba(4, 35, 43, .88) 0%, rgba(4, 45, 53, .68) 50%, rgba(5, 48, 56, .18) 100%), linear-gradient(0deg, rgba(5, 42, 50, .28), transparent 45%); content: ""; }
+    .hero-content { position: relative; width: min(780px, 100%); padding-block: 90px; }
+    .hero .eyebrow { color: #c6f4e8; }
+    .hero h1 { max-width: 760px; margin-top: 20px; font-size: clamp(2.8rem, 6.2vw, 5.35rem); font-weight: 800; letter-spacing: -.055em; }
+    .hero h1 span { color: #8ce0dc; }
+    .hero-copy { max-width: 620px; margin: 22px 0 0; color: rgba(255,255,255,.86); font-size: clamp(1.03rem, 1.7vw, 1.2rem); }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+    .hero .button:first-child { background: var(--gold); color: #263c3f; }
+    .hero .button:first-child:hover { background: #f7b578; }
+    .rating-badge { display: inline-flex; align-items: center; gap: 10px; margin-top: 42px; padding: 11px 16px; border: 1px solid rgba(255,255,255,.26); border-radius: 999px; background: rgba(3, 43, 52, .42); color: white; font-size: .88rem; font-weight: 700; backdrop-filter: blur(10px); }
+    .rating-badge .stars { color: #ffc56f; letter-spacing: .08em; }
+
+    section { padding-block: 106px; }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: clamp(45px, 8vw, 100px); }
+    .about-copy h2 { margin-top: 15px; }
+    .about-copy p { margin: 20px 0 0; color: var(--muted); font-size: 1.02rem; }
+    .about-note { display: flex; align-items: center; gap: 13px; margin-top: 27px; color: var(--deep); font-size: .92rem; font-weight: 700; }
+    .about-note-icon { display: grid; width: 43px; height: 43px; flex: none; place-items: center; border-radius: 14px; background: #e7f8f4; color: var(--green); }
+    .about-note-icon svg { width: 22px; }
+    .about-photo-wrap { position: relative; }
+    .about-photo { width: 100%; height: 480px; border-radius: 28px; background: var(--mist); object-fit: cover; object-position: center; box-shadow: var(--shadow); }
+    .photo-caption { position: absolute; right: -20px; bottom: 25px; max-width: 230px; padding: 17px 20px; border-radius: 17px; background: white; box-shadow: var(--shadow); color: var(--deep); font-size: .88rem; font-weight: 700; }
+    .photo-caption span { display: block; margin-top: 3px; color: var(--muted); font-size: .78rem; font-weight: 500; }
+
+    .services { background: var(--mist); }
+    .section-heading { text-align: center; }
+    .section-heading h2 { margin-top: 13px; }
+    .service-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-top: 48px; }
+    .service-card { min-height: 275px; padding: 28px 25px; border: 1px solid rgba(226,238,236,.9); border-radius: var(--radius); background: white; transition: transform .22s ease, box-shadow .22s ease; }
+    .service-card:hover { transform: translateY(-6px); box-shadow: var(--shadow); }
+    .service-icon { display: grid; width: 53px; height: 53px; place-items: center; border-radius: 17px; background: #e7f8f4; color: var(--green); }
+    .service-card:nth-child(2) .service-icon { background: #e7f6fb; color: var(--ocean); }
+    .service-card:nth-child(3) .service-icon { background: #fff3e6; color: #d47b32; }
+    .service-card:nth-child(4) .service-icon { background: #eef0ff; color: #6375bc; }
+    .service-icon svg { width: 26px; height: 26px; }
+    .service-card h3 { margin-top: 22px; color: var(--deep); font-size: 1.15rem; letter-spacing: -.02em; }
+    .service-card p { margin: 10px 0 0; color: var(--muted); font-size: .91rem; }
+
+    .reviews { overflow: hidden; }
+    .review-rating { display: inline-flex; align-items: center; gap: 9px; margin-top: 17px; color: var(--muted); font-size: .96rem; }
+    .review-rating strong { color: var(--deep); }
+    .review-rating .stars { color: #f1a445; letter-spacing: .08em; }
+    .review-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 17px; margin-top: 43px; }
+    .review-card { display: flex; flex-direction: column; min-height: 235px; padding: 25px; border: 1px solid var(--line); border-radius: 19px; background: white; }
+    .review-stars { color: #efa247; font-size: .93rem; letter-spacing: .13em; }
+    .review-card blockquote { flex: 1; margin: 15px 0 23px; color: #4d666c; font-size: .93rem; line-height: 1.7; }
+    .reviewer { display: flex; align-items: center; gap: 11px; color: var(--deep); font-size: .87rem; font-weight: 700; }
+    .review-avatar { display: grid; width: 37px; height: 37px; flex: none; place-items: center; border-radius: 50%; background: linear-gradient(145deg, #d9f4eb, #c4e9f5); color: var(--ocean); font-size: .72rem; font-weight: 800; }
+    .google-link { margin-top: 34px; text-align: center; }
+    .button-outline { border: 1px solid #b8d9d8; background: white; color: var(--ocean); }
+    .button-outline:hover { border-color: var(--ocean); background: #f2fbfd; box-shadow: none; }
+
+    .contact { background: var(--deep); color: white; }
+    .contact .eyebrow { color: #a8e6db; }
+    .contact h2 { margin-top: 14px; color: white; }
+    .contact-intro { margin: 15px 0 0; color: rgba(255,255,255,.68); }
+    .contact-grid { display: grid; grid-template-columns: .9fr 1.1fr; align-items: center; gap: 64px; }
+    .contact-details { display: grid; gap: 19px; margin-top: 35px; }
+    .contact-item { display: grid; grid-template-columns: 42px 1fr; align-items: start; gap: 13px; }
+    .contact-icon { display: grid; width: 42px; height: 42px; place-items: center; border: 1px solid rgba(255,255,255,.15); border-radius: 14px; background: rgba(255,255,255,.08); color: #8ce0dc; }
+    .contact-icon svg { width: 19px; height: 19px; }
+    .contact-item strong { display: block; margin: 0 0 2px; color: white; font-size: .9rem; }
+    .contact-item span, .contact-item a { color: rgba(255,255,255,.7); font-size: .92rem; text-decoration: none; }
+    .contact-item a:hover { color: #9ce8e0; }
+    .contact-actions { display: flex; flex-wrap: wrap; gap: 11px; margin-top: 31px; }
+    .contact .button { background: var(--aqua); color: var(--deep); }
+    .contact .button:hover { background: #52d0e4; }
+    .contact .button-light { border-color: rgba(255,255,255,.24); background: transparent; color: white; }
+    .contact .button-light:hover { background: rgba(255,255,255,.1); }
+    .map-frame { width: 100%; height: 440px; border: 0; border-radius: 24px; background: #d9e9e6; box-shadow: 0 20px 60px rgba(0,0,0,.18); }
+
+    .footer { padding-block: 27px; background: #052f3d; color: rgba(255,255,255,.66); }
+    .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 20px; font-size: .8rem; }
+    .footer p { margin: 0; }
+    .footer-links { display: flex; gap: 20px; }
+    .footer a { color: rgba(255,255,255,.78); text-decoration: none; }
+    .footer a:hover { color: white; }
+    .footer-note { color: rgba(255,255,255,.48); }
+    .reveal { opacity: 0; transform: translateY(18px); transition: opacity .65s ease, transform .65s ease; }
+    .reveal.is-visible { opacity: 1; transform: translateY(0); }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; }
+      .reveal { opacity: 1; transform: none; }
+    }
+
+    @media (max-width: 960px) {
+      .nav-links { gap: 20px; }
+      .nav-cta { padding-inline: 15px; font-size: .82rem; }
+      .service-grid { grid-template-columns: repeat(2, 1fr); }
+      .contact-grid { gap: 38px; }
+      .about-photo { height: 430px; }
+    }
+    @media (max-width: 720px) {
+      .container { width: min(100% - 36px, 560px); }
+      .nav-wrap { min-height: 70px; }
+      .brand { font-size: .78rem; }
+      .brand-mark { width: 35px; height: 35px; }
+      .menu-toggle { display: grid; place-items: center; margin-left: auto; }
+      .nav-cta { display: none; }
+      .nav-links {
+        position: absolute;
+        top: calc(100% + 1px);
+        right: 0;
+        left: 0;
+        display: none;
+        align-items: stretch;
+        gap: 0;
+        padding: 8px 18px 16px;
+        border-bottom: 1px solid var(--line);
+        background: white;
+        box-shadow: 0 16px 22px rgba(7,59,76,.08);
+      }
+      .nav-links.open { display: flex; flex-direction: column; }
+      .nav-links a { display: block; padding: 12px 8px; }
+      .hero { min-height: 690px; min-height: min(760px, calc(100svh - 70px)); }
+      .hero::before { background-position: 58% center; }
+      .hero::after { background: linear-gradient(90deg, rgba(4,35,43,.84), rgba(4,45,53,.46)), linear-gradient(0deg, rgba(5,42,50,.4), transparent 55%); }
+      .hero-content { padding-block: 72px; }
+      .hero h1 { font-size: clamp(2.65rem, 11vw, 4.3rem); }
+      .hero-copy { font-size: 1rem; }
+      .rating-badge { margin-top: 31px; font-size: .79rem; }
+      section { padding-block: 76px; }
+      .about-grid, .contact-grid { grid-template-columns: 1fr; }
+      .about-grid { gap: 35px; }
+      .about-photo { height: 390px; }
+      .photo-caption { right: 12px; bottom: 13px; }
+      .service-grid { gap: 12px; margin-top: 35px; }
+      .service-card { min-height: 265px; padding: 22px 18px; }
+      .review-grid { grid-template-columns: 1fr; gap: 12px; margin-top: 32px; }
+      .review-card { min-height: 0; }
+      .contact-grid { gap: 35px; }
+      .map-frame { height: 350px; }
+      .footer-inner { flex-direction: column; align-items: flex-start; gap: 10px; }
+    }
+    @media (max-width: 430px) {
+      .container { width: calc(100% - 32px); }
+      .brand { letter-spacing: .02em; }
+      .hero-actions { align-items: stretch; flex-direction: column; max-width: 290px; }
+      .hero-actions .button { width: 100%; }
+      .service-grid { grid-template-columns: 1fr; }
+      .service-card { min-height: auto; }
+      .about-photo { height: 320px; }
+      .map-frame { height: 300px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="container nav-wrap" aria-label="Main navigation">
+      <a class="brand" href="#home" aria-label="AQUA PETSHOP ONLINE home">
+        <span class="brand-mark"><img src="logo.jpg" alt=""></span>
+        <span>AQUA PETSHOP ONLINE</span>
+      </a>
+      <ul class="nav-links" id="primary-menu">
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a class="nav-cta" href="https://www.facebook.com/Aquapetcebu/" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.7 21v-8.2h2.8l.4-3.2h-3.2v-2c0-.9.3-1.5 1.6-1.5H17V3.2c-.3 0-1.3-.2-2.5-.2-2.5 0-4.2 1.5-4.2 4.3v2.3H7.5v3.2h2.8V21h3.4Z"/></svg>
+        Message Us
+      </a>
+      <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="https://images.unsplash.com/photo-1524704654690-b56c05c78a00?auto=format&amp;fit=crop&amp;w=2000&amp;q=85" aria-hidden="true" tabindex="-1">
+        <source src="background.mp4" type="video/mp4">
+      </video>
+      <div class="container">
+        <div class="hero-content">
+          <span class="eyebrow">A little underwater wonder, right here in Talisay</span>
+          <h1 id="hero-title">Creating Beautiful, Healthy <span>Aquascapes</span> in Talisay, Cebu.</h1>
+          <p class="hero-copy">Your trusted local aquatic shop for custom tank designs, expert maintenance, and high-quality fish — for over 5 years.</p>
+          <div class="hero-actions">
+            <a class="button" href="#contact">Visit Our Shop <span aria-hidden="true">→</span></a>
+            <a class="button button-light" href="https://www.facebook.com/Aquapetcebu/" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.7 21v-8.2h2.8l.4-3.2h-3.2v-2c0-.9.3-1.5 1.6-1.5H17V3.2c-.3 0-1.3-.2-2.5-.2-2.5 0-4.2 1.5-4.2 4.3v2.3H7.5v3.2h2.8V21h3.4Z"/></svg>
+              Message Us on Facebook
+            </a>
+          </div>
+          <div class="rating-badge"><span class="stars" aria-label="5 out of 5 stars">★★★★★</span> 5.0 Rating <span aria-hidden="true">·</span> 16 Google Reviews</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" aria-labelledby="about-title">
+      <div class="container about-grid">
+        <div class="about-copy reveal">
+          <span class="eyebrow">More than a pet shop</span>
+          <h2 id="about-title">Trusted by Hobbyists for Years.</h2>
+          <p>For over five years, AQUA PETSHOP ONLINE has been the go-to aquascape shop for hobbyists in Talisay, Cebu, who demand quality and creativity. Our passion is transforming your aquarium into a thriving underwater ecosystem. We specialize in personalized designs that are anything but generic, ensuring your tank is as unique as you are. From reliable maintenance to expert advice, we're here to support your aquatic journey — with a friendly smile and zero pressure.</p>
+          <div class="about-note">
+            <span class="about-note-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.4-7-10.1A4.1 4.1 0 0 1 12 8.3a4.1 4.1 0 0 1 7 2.6C19 16.6 12 21 12 21Z"/><path d="m9.5 13 1.7 1.7 3.6-3.8"/></svg></span>
+            Thoughtful care for every tank, fish, and hobbyist.
+          </div>
+        </div>
+        <div class="about-photo-wrap reveal">
+          <img class="about-photo" src="https://images.unsplash.com/photo-1546026423-cc4642628d2b?auto=format&fit=crop&w=1100&q=82" alt="A thriving planted aquarium with colorful fish and lush aquatic plants" loading="lazy">
+          <div class="photo-caption">Made with care, every day.<span>Local expertise. Personal service.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="services" id="services" aria-labelledby="services-title">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="eyebrow">Here for your aquatic journey</span>
+          <h2 id="services-title">Good care makes a world of difference.</h2>
+          <p class="section-intro">Whether you're starting your first tank or refreshing a long-loved one, we're happy to help you make it thrive.</p>
+        </div>
+        <div class="service-grid">
+          <article class="service-card reveal">
+            <span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 19h18M5 19V8l7-4 7 4v11"/><path d="M8 15c1.4-2.1 2.6-2.1 4 0s2.6 2.1 4 0"/></svg></span>
+            <h3>Custom Aquascape Design</h3>
+            <p>Creative, personalized designs that transform your tank into a work of art. We never use generic setups.</p>
+          </article>
+          <article class="service-card reveal">
+            <span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v3M5.6 5.6l2.1 2.1M3 12h3m12 0h3m-3.7-4.3 2.1-2.1M7 14.5a5 5 0 0 1 10 0c0 2.1-1 3-2 4.5H9c-1-1.5-2-2.4-2-4.5Z"/><path d="M9 21h6"/></svg></span>
+            <h3>Aquarium Maintenance</h3>
+            <p>Reliable and consistent maintenance to keep your tank healthy, beautiful, and thriving for years.</p>
+          </article>
+          <article class="service-card reveal">
+            <span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12s3.2-5 9-5 9 5 9 5-3.2 5-9 5-9-5-9-5Z"/><circle cx="12" cy="12" r="2.5"/><path d="m5.3 17.2 2.1-2.1m9.2-6.2 2.1-2.1"/></svg></span>
+            <h3>Quality Fish &amp; Supplies</h3>
+            <p>A wide variety of healthy, high-quality fish and top-tier aquatic supplies at budget-friendly prices.</p>
+          </article>
+          <article class="service-card reveal">
+            <span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.4-7-10.1A4.1 4.1 0 0 1 12 8.3a4.1 4.1 0 0 1 7 2.6C19 16.6 12 21 12 21Z"/><path d="M9.5 13h5m-2.5-2.5v5"/></svg></span>
+            <h3>Expert Advice</h3>
+            <p>Friendly, no-pressure advice from a seller who is amiable, accommodating, and passionate about the hobby.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="reviews" id="reviews" aria-labelledby="reviews-title">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="eyebrow">Kind words from our community</span>
+          <h2 id="reviews-title">What Our Customers Say</h2>
+          <div class="review-rating"><span class="stars" aria-label="5 out of 5 stars">★★★★★</span> <strong>Rated 5.0 stars</strong> from 16 Google Reviews</div>
+        </div>
+        <div class="review-grid">
+          <article class="review-card reveal">
+            <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <blockquote>“I've trusted this aquascape shop to maintain my tank for 5 years, and they've been consistently amazing. Their designs are incredibly creative and never feel generic — every setup is thoughtfully personalized. Maintenance is always reliable, and my tank has stayed healthy and beautiful through the years. Highly recommended!”</blockquote>
+            <div class="reviewer"><span class="review-avatar" aria-hidden="true">LS</span>Luke Anthony Santillan</div>
+          </article>
+          <article class="review-card reveal">
+            <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <blockquote>“Fast response, good fish qualities and moreeee. Better visit this shop!”</blockquote>
+            <div class="reviewer"><span class="review-avatar" aria-hidden="true">BM</span>Boi Malinao</div>
+          </article>
+          <article class="review-card reveal">
+            <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <blockquote>“The aquatic shop is really nice and has a good vibe. I also like the variety of fish and supplies you offer.”</blockquote>
+            <div class="reviewer"><span class="review-avatar" aria-hidden="true">JL</span>John Kenzhu Legaspi</div>
+          </article>
+          <article class="review-card reveal">
+            <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <blockquote>“Good fish and food quality, good services, good seller. Overall experience is good.”</blockquote>
+            <div class="reviewer"><span class="review-avatar" aria-hidden="true">LL</span>Louie Jay Lapuz</div>
+          </article>
+          <article class="review-card reveal">
+            <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <blockquote>“Budget friendly and high quality ang items.”</blockquote>
+            <div class="reviewer"><span class="review-avatar" aria-hidden="true">AE</span>Alfred Eco</div>
+          </article>
+          <article class="review-card reveal">
+            <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <blockquote>“The owner is amiable and very accommodating.”</blockquote>
+            <div class="reviewer"><span class="review-avatar" aria-hidden="true">JG</span>Janine C. Gimenez</div>
+          </article>
+          <article class="review-card reveal">
+            <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <blockquote>“The seller is very accommodating and very friendly. I entered their shop and I felt welcome. Being able to communicate friendly and not being pressured is the best because you can relay what you want.”</blockquote>
+            <div class="reviewer"><span class="review-avatar" aria-hidden="true">JM</span>Jeremiah Montebon</div>
+          </article>
+        </div>
+        <div class="google-link reveal">
+          <a class="button button-outline" href="https://www.google.com/maps/search/?api=1&amp;query=AQUA+PETSHOP+ONLINE%2C+Rafael+Rabaya+Rd%2C+Talisay%2C+Cebu" target="_blank" rel="noopener noreferrer">See All Reviews on Google <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <div class="container contact-grid">
+        <div class="contact-copy reveal">
+          <span class="eyebrow">Come say hello</span>
+          <h2 id="contact-title">Your next favorite tank starts here.</h2>
+          <p class="contact-intro">Have a question, need directions, or want to chat about your setup? We’d love to hear from you.</p>
+          <div class="contact-details">
+            <div class="contact-item">
+              <span class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
+              <div><strong>Find our shop</strong><span>Rafael Rabaya Rd, Talisay, Cebu</span></div>
+            </div>
+            <div class="contact-item">
+              <span class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16.2v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 1.1 3.4 2 2 0 0 1 3.1 1.2h3a2 2 0 0 1 2 1.7l.5 3a2 2 0 0 1-.6 1.7L6.7 8.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 1.7-.6l3 .5a2 2 0 0 1 1.7 2.7Z"/></svg></span>
+              <div><strong>Call us</strong><a href="tel:+639695266136">09695266136</a></div>
+            </div>
+            <div class="contact-item">
+              <span class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 11.5a7.5 7.5 0 0 1-8 7.5 8.4 8.4 0 0 1-3.5-.8L4 20l1.5-3.4A7.1 7.1 0 0 1 4 12a7.5 7.5 0 0 1 8-7.5 7.5 7.5 0 0 1 8 7Z"/></svg></span>
+              <div><strong>Message us</strong><a href="https://www.facebook.com/Aquapetcebu/" target="_blank" rel="noopener noreferrer">Facebook Messenger</a></div>
+            </div>
+            <div class="contact-item">
+              <span class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></svg></span>
+              <div><strong>Follow along</strong><a href="https://instagram.com/aquapetshoponline" target="_blank" rel="noopener noreferrer">Instagram</a></div>
+            </div>
+            <div class="contact-item">
+              <span class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+              <div><strong>Current hours</strong><span>Message us on Facebook for current hours</span></div>
+            </div>
+          </div>
+          <div class="contact-actions">
+            <a class="button" href="https://www.facebook.com/Aquapetcebu/" target="_blank" rel="noopener noreferrer">Message Us on Facebook <span aria-hidden="true">↗</span></a>
+            <a class="button button-light" href="tel:+639695266136">Call Now</a>
+          </div>
+        </div>
+        <div class="map-wrap reveal">
+          <iframe class="map-frame" title="Map to AQUA PETSHOP ONLINE on Rafael Rabaya Road in Talisay, Cebu" src="https://maps.google.com/maps?q=Rafael%20Rabaya%20Rd%2C%20Talisay%2C%20Cebu&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© 2025 AQUA PETSHOP ONLINE. All Rights Reserved.</p>
+      <div class="footer-links"><a href="#privacy">Privacy Policy</a><a href="#terms">Terms of Service</a></div>
+      <p class="footer-note">Serving Talisay, Cebu and nearby areas.</p>
+    </div>
+  </footer>
+  <script>
+    const menuButton = document.querySelector(".menu-toggle");
+    const menu = document.querySelector(".nav-links");
+
+    menuButton.addEventListener("click", () => {
+      const isOpen = menuButton.getAttribute("aria-expanded") === "true";
+      menuButton.setAttribute("aria-expanded", String(!isOpen));
+      menuButton.setAttribute("aria-label", isOpen ? "Open navigation menu" : "Close navigation menu");
+      menu.classList.toggle("open", !isOpen);
+    });
+
+    menu.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        menu.classList.remove("open");
+        menuButton.setAttribute("aria-expanded", "false");
+        menuButton.setAttribute("aria-label", "Open navigation menu");
+      });
+    });
+
+    const revealElements = document.querySelectorAll(".reveal");
+    if ("IntersectionObserver" in window) {
+      const observer = new IntersectionObserver((entries, currentObserver) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            currentObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+      revealElements.forEach((element) => observer.observe(element));
+    } else {
+      revealElements.forEach((element) => element.classList.add("is-visible"));
+    }
+  </script>
+</body>
+</html>
